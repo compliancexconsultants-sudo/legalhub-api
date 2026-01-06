@@ -22,6 +22,7 @@ function createTransporter() {
 
 async function sendEmail(to, subject, html) {
   const mailer = createTransporter();
+  console.log(to);
 
   const mailOptions = {
     from: process.env.EMAIL_FROM,

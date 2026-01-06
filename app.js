@@ -11,7 +11,8 @@ const caseRoutes = require("./routes/cases");
 const caRoutes = require("./routes/ca");
 const users = require("./routes/users");
 const dashboard = require("./routes/dashboard");
-const servicesRoutes = require("./routes/services");  
+const servicesRoutes = require("./routes/services"); 
+const contactUsroutes = require("./routes/contactus/index") 
 const app = express();
 
 // Connect DB
@@ -29,6 +30,7 @@ app.use("/api/cases", caseRoutes);
 app.use("/api/ca", caRoutes);
 app.use("/api/user", users);
 app.use("/api/dashboard", dashboard);
+app.use("/api/contactus", contactUsroutes)
 
 app.use("/api/services", servicesRoutes);  // <-- MOUNT SERVICE & TAG ROUTES
 
