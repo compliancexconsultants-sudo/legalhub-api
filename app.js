@@ -6,6 +6,7 @@ const morgan = require("morgan");
 const connectDB = require("./config/db");
 
 const userRoutes = require("./routes/user");
+const referRoute = require("./routes/refer")
 const authRoutes = require("./routes/auth");
 const caseRoutes = require("./routes/cases");
 const caRoutes = require("./routes/ca");
@@ -25,6 +26,7 @@ app.use(morgan("dev"));
 
 // Routes
 app.use("/api/users", userRoutes);
+app.use("/api/refer", referRoute);
 app.use("/api/auth", authRoutes);
 app.use("/api/cases", caseRoutes);
 app.use("/api/ca", caRoutes);
